@@ -12,6 +12,9 @@ public class Main {
         private int balance = 0;
         private JLabel balanceLabel;
 
+
+
+
         public MyWindow(){
 
             //Создаем фрейм (окно)
@@ -27,8 +30,18 @@ public class Main {
             //Создадим кнопку "Увеличить" и поместим ее во фрейм
             JButton btnIncrease = new JButton("Увеличить");
             frame.add(btnIncrease, BorderLayout.SOUTH);
+            JButton btnIncrease1 = new JButton("Уменьшить");
+            frame.add(btnIncrease1, BorderLayout.NORTH);
+
 
             //Добавим к кнопке слушатель события
+            btnIncrease1.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e) {
+                    balance--;
+                    updateBalance();
+                }
+            });
+
             btnIncrease.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e) {
                     balance++;
