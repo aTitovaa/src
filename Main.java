@@ -18,7 +18,7 @@ public class Main {
         public MyWindow(){
 
             //Создаем фрейм (окно)
-            JFrame frame = new JFrame("My cool window");
+            JFrame frame = new JFrame("window");
 
             //Просим программу закрыться при закрытии фрейма
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,14 +37,14 @@ public class Main {
             //Добавим к кнопке слушатель события
             btnIncrease1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e) {
-                    balance--;
+                    balance++;
                     updateBalance();
                 }
             });
 
             btnIncrease.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e) {
-                    balance++;
+                    balance--;
                     updateBalance();
                 }
             });
